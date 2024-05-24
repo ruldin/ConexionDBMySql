@@ -1,0 +1,40 @@
+﻿CREATE DATABASE LaboratorioCRUD;
+USE LaboratorioCRUD;
+
+CREATE TABLE Usuarios (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    Nombre VARCHAR(50),
+    Apellido VARCHAR(50),
+    FechaNacimiento DATE,
+    Email VARCHAR(100),
+    Saldo DECIMAL(10, 2),
+    Activo BOOLEAN
+);
+
+
+INSERT INTO Usuarios (Nombre, Apellido, FechaNacimiento, Email, Saldo, Activo) VALUES
+('Juan', 'Pérez', '1995-04-23', 'juan.perez@example.com', 150.50, TRUE),
+('María', 'Gómez', '1993-06-15', 'maria.gomez@example.com', 200.75, TRUE),
+('Carlos', 'López', '1998-09-09', 'carlos.lopez@example.com', 300.00, FALSE),
+('Ana', 'Martínez', '1996-11-30', 'ana.martinez@example.com', 400.20, TRUE),
+('Pedro', 'Hernández', '1997-02-18', 'pedro.hernandez@example.com', 50.50, FALSE),
+('Laura', 'García', '1994-08-25', 'laura.garcia@example.com', 125.75, TRUE),
+('Luis', 'Rodríguez', '1999-01-05', 'luis.rodriguez@example.com', 175.00, TRUE),
+('Carmen', 'Sánchez', '1992-12-19', 'carmen.sanchez@example.com', 225.25, FALSE),
+('Miguel', 'Torres', '1990-10-10', 'miguel.torres@example.com', 275.50, TRUE),
+('Lucía', 'Ramírez', '2000-07-01', 'lucia.ramirez@example.com', 325.75, TRUE),
+('Javier', 'Flores', '1991-03-12', 'javier.flores@example.com', 375.00, FALSE),
+('Sofía', 'Romero', '1995-05-22', 'sofia.romero@example.com', 425.25, TRUE),
+('Diego', 'Vázquez', '1996-08-14', 'diego.vazquez@example.com', 475.50, FALSE),
+('Valeria', 'Díaz', '1997-11-11', 'valeria.diaz@example.com', 525.75, TRUE),
+('David', 'Cruz', '1998-02-28', 'david.cruz@example.com', 575.00, TRUE),
+('Marta', 'Morales', '1993-04-17', 'marta.morales@example.com', 625.25, FALSE),
+('Andrés', 'Ortiz', '1994-07-20', 'andres.ortiz@example.com', 675.50, TRUE),
+('Isabel', 'Jiménez', '1995-10-05', 'isabel.jimenez@example.com', 725.75, FALSE),
+('Fernando', 'Ruiz', '1996-01-29', 'fernando.ruiz@example.com', 775.00, TRUE),
+('Patricia', 'Navarro', '1997-03-07', 'patricia.navarro@example.com', 825.25, TRUE);
+
+-- Verificar que los datos se han insertado correctamente
+SELECT * FROM Usuarios;
+
+
